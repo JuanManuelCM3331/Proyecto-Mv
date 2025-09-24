@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Cuidador</title>
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <link rel="stylesheet" href="../JavaScript/demas_funciones.js">
+  <link rel="stylesheet" href="../JavaScript/dashboard.js">
+  <link rel="stylesheet" href="../JavaScript/medicamentos.js">
+  <link rel="stylesheet" href="../JavaScript/generacion_reportes.js">
+  <link rel="stylesheet" href="../JavaScript/alertas.js">
+  <link rel="stylesheet" href="../JavaScript/recordatorios.js">
+  
+</head>
+<body>
+  <main class="dashboard">
+    <header class="topbar">
+      <h2>Panel de Cuidador</h2>
+      <div class="acciones">
+        <span>Configuracion</span>
+        <span>volver a la pagina</span>
+        <span>
+            <img src="../Assets/ajuste.png" alt="" class="engranaje">
+        </span>
+      </div>
+    </header>
+
+    <div class="contenido">
+      <aside class="sidebar">
+        <ul>
+          <li> Dashboard</li>
+          <li> Historial</li>
+          <li> Reportes</li>
+          <li> Alertas</li>
+          <li> Medicamentos</li>
+        </ul>
+      </aside>
+
+      <section class="main-content">
+        <h3>Resumen</h3>
+        <div class="cards">
+          <div class="card">
+            <h4> Pacientes</h4>
+            <p>5 pacientes a cargo</p>
+          </div>
+          <div class="card">
+            <h4>Adherencia promedio</h4>
+            <p>85%</p>
+          </div>
+          <div class="card">
+            <h4> Alertas activas</h4>
+            <p>2</p>
+          </div>
+        </div>
+
+        <h3>Alertas recientes</h3>
+        <div class="alertas">
+          <p> prueba1 no tomó su dosis de Metformina (08:00 AM)</p>
+          <p> prueba2 pospuso su medicamento X (10:00 AM)</p>
+        </div>
+
+        <h3>Reportes</h3>
+        <canvas id="grafico"></canvas>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

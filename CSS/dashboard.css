@@ -1,0 +1,160 @@
+/* esto ya es redundante, obvio que es el estilo del dashboard */
+
+/* Esto es solo para hacer el reset y el body pues es la estructura principal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estructura principal */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Barra superior */
+.topbar {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.topbar h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.topbar .acciones span {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.topbar .acciones span:hover {
+  transform: scale(1.2);
+}
+
+/* Layout general */
+.contenido {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 14px 12px;
+  font-size: 15px;
+  color: #2a5298;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #f0f2f5;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background: #f5f6fa;
+}
+
+.main-content h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #1e3c72;
+  font-weight: 600;
+}
+
+/* Cards resumen */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #2a5298;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* las alertas */
+.alertas {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.alertas p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #dc3545;
+}
+
+/* Reportes */
+#grafico {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.engranaje {
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+}

@@ -1,0 +1,140 @@
+/* esto ya es redundante, obvio que es el estilo del login */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+}
+
+.contenedor {
+  display: flex;
+  width: 900px;
+  height: 550px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Columna izquierda (osea la cajita azul con informacion) */
+.izquierda {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.izquierda .logo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.izquierda h1 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.izquierda p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.boton-informacion {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boton-informacion:hover {
+  background: #fff;
+  color: #2a5298;
+}
+
+/* la parte de la derecha (es decir el login) */
+.derecha {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.opciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #666;
+}
+
+.opciones a {
+  text-decoration: none;
+  color: #2a5298;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #2a5298;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background: #1e3c72;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+}

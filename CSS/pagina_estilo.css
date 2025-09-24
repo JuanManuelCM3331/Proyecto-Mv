@@ -1,0 +1,162 @@
+/* esto ya es redundante, obvio que es el estilo del main */
+/* Reset de rutina */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor general del dashboard */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Barra superior */
+.topbar {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.topbar h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.topbar .acciones span {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.topbar .acciones span:hover {
+  transform: scale(1.2);
+}
+
+/* Contenido general: sidebar + main */
+.contenido {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+/* Sidebar (solo para cuidadores) */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 12px 10px;
+  font-size: 15px;
+  color: #2a5298;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #f0f2f5;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.main-content h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1e3c72;
+}
+
+/* Tarjetas de medicamentos */
+.medicamento-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.medicamento-card:hover {
+  transform: translateY(-5px);
+}
+
+.medicamento-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #2a5298;
+}
+
+.medicamento-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Botones */
+.btn {
+  padding: 10px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.tomar {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: #fff;
+}
+
+.btn.tomar:hover {
+  opacity: 0.9;
+}
+
+.btn.omitir {
+  background: #dc3545;
+  color: #fff;
+}
+
+.btn.omitir:hover {
+  opacity: 0.9;
+}
+
+.btn.posponer {
+  background: #ffc107;
+  color: #333;
+}
+
+.btn.posponer:hover {
+  opacity: 0.9;
+}

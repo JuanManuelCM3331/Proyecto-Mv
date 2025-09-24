@@ -1,0 +1,7 @@
+Esta carpeta es para guardar las imagenes o iconos que se utilizaran.
+Es mejor descargarlos e insertarlos en el proyecto dentro del
+visual que simplemente invocarlo. entonces en esta carpeta se insertara
+todos esos iconos, imagenes, etc.
+
+(Por cierto, si se invoca una foto simplemente con el link, aunque sea 
+un png sin fondo igual queda con un fondo blanco.)

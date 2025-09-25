@@ -4,64 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel de Cuidador</title>
-  <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
   <link rel="stylesheet" href="../JavaScript/demas_funciones.js">
   <link rel="stylesheet" href="../JavaScript/dashboard.js">
   <link rel="stylesheet" href="../JavaScript/medicamentos.js">
   <link rel="stylesheet" href="../JavaScript/generacion_reportes.js">
   <link rel="stylesheet" href="../JavaScript/alertas.js">
   <link rel="stylesheet" href="../JavaScript/recordatorios.js">
-  
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <main class="dashboard">
-    <header class="topbar">
-      <h2>Panel de Cuidadorasdasd</h2>
-      <div class="acciones">
-        <span>Configuracion</span>
-        <span>volver a la pagina</span>
-        <span>
-            <img src="../Assets/ajuste.png" alt="" class="engranaje">
-        </span>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col font-[Montserrat]">
+  <main class="flex flex-col flex-1">
+
+    <header class="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-4 flex justify-between items-center shadow-md">
+      <h2 class="text-lg md:text-xl font-semibold">Panel de Cuidador</h2>
+      <div class="flex items-center gap-4 text-sm md:text-base">
+        <span class="cursor-pointer hover:scale-110 transition">Configuración</span>
+        <span class="cursor-pointer hover:scale-110 transition">Volver a la página</span>
+        <img src="../Assets/ajuste.png" alt="Configuración" class="w-10 h-10 invert">
       </div>
     </header>
 
-    <div class="contenido">
-      <aside class="sidebar">
-        <ul>
-          <li> Dashboard</li>
-          <li> Historial</li>
-          <li> Reportes</li>
-          <li> Alertas</li>
-          <li> Medicamentos</li>
+    <div class="flex flex-1 flex-col md:flex-row">
+
+      <aside class="bg-white w-full md:w-56 p-4 border-r shadow-sm">
+        <ul class="space-y-2 md:space-y-4 flex md:flex-col flex-row md:overflow-auto overflow-x-auto text-blue-800 font-medium text-sm md:text-base">
+          <li class="px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-100">Dashboard</li>
+          <li class="px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-100">Historial</li>
+          <li class="px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-100">Reportes</li>
+          <li class="px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-100">Alertas</li>
+          <li class="px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-100">Medicamentos</li>
         </ul>
       </aside>
 
-      <section class="main-content">
-        <h3>Resumen</h3>
-        <div class="cards">
-          <div class="card">
-            <h4> Pacientes</h4>
-            <p>5 pacientes a cargo</p>
+      <section class="flex-1 p-6 bg-gray-50 overflow-y-auto">
+
+        <h3 class="text-lg font-semibold text-blue-900 mb-4">Resumen</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-white p-4 rounded-xl shadow hover:-translate-y-1 transition">
+            <h4 class="text-blue-800 font-semibold mb-1">Pacientes</h4>
+            <p class="text-gray-600 text-sm">5 pacientes a cargo</p>
           </div>
-          <div class="card">
-            <h4>Adherencia promedio</h4>
-            <p>85%</p>
+          <div class="bg-white p-4 rounded-xl shadow hover:-translate-y-1 transition">
+            <h4 class="text-blue-800 font-semibold mb-1">Adherencia promedio</h4>
+            <p class="text-gray-600 text-sm">85%</p>
           </div>
-          <div class="card">
-            <h4> Alertas activas</h4>
-            <p>2</p>
+          <div class="bg-white p-4 rounded-xl shadow hover:-translate-y-1 transition">
+            <h4 class="text-blue-800 font-semibold mb-1">Alertas activas</h4>
+            <p class="text-gray-600 text-sm">2</p>
           </div>
         </div>
 
-        <h3>Alertas recientes</h3>
-        <div class="alertas">
-          <p> prueba1 no tomó su dosis de Metformina (08:00 AM)</p>
-          <p> prueba2 pospuso su medicamento X (10:00 AM)</p>
+        <h3 class="text-lg font-semibold text-blue-900 mb-4">Alertas recientes</h3>
+        <div class="bg-white p-4 rounded-xl shadow mb-6">
+          <p class="text-red-600 text-sm mb-2">prueba1 no tomó su dosis de Metformina (08:00 AM)</p>
+          <p class="text-red-600 text-sm">prueba2 pospuso su medicamento X (10:00 AM)</p>
         </div>
 
-        <h3>Reportes</h3>
-        <canvas id="grafico"></canvas>
+
+        <h3 class="text-lg font-semibold text-blue-900 mb-4">Reportes</h3>
+        <canvas id="grafico" class="bg-white p-4 rounded-xl shadow w-full"></canvas>
       </section>
     </div>
   </main>

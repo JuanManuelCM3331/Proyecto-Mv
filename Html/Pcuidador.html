@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Cuidador</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen flex flex-col font-sans bg-[#0D2C7C] text-gray-900">
+  <main class="flex flex-col h-full">
+
+    <header
+      class="text-white px-8 py-4 flex justify-between items-center shadow-md bg-[#0D2C7C] bg-opacity-95 backdrop-blur-sm">
+      <h2 class="text-lg md:text-xl font-semibold bg-blue-800 bg-opacity-70 rounded-full px-5 py-2 shadow">
+        Bienvenido, (nombre de usuario)
+      </h2>
+
+      <nav class="flex space-x-8 text-base md:text-lg font-medium">
+        <a href="#" class="hover:text-yellow-300 transition-colors duration-200">Inicio</a>
+        <a href="#" class="hover:text-yellow-300 transition-colors duration-200">Perfil</a>
+        <a href="#" class="hover:text-yellow-300 transition-colors duration-200">Cerrar sesión</a>
+      </nav>
+    </header>
+
+
+    <div class="flex flex-1 overflow-hidden">
+
+      <aside class="w-64 p-6 bg-[#0D2C7C] bg-opacity-95 shadow-lg overflow-y-auto">
+        <ul class="space-y-4">
+          <li
+            class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
+            Pacientes
+          </li>
+          <li
+            class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
+            Medicamentos
+          </li>
+          <li
+            class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
+            Historial
+          </li>
+          <li
+            class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
+            Reportes
+          </li>
+        </ul>
+      </aside>
+
+      <section id="seccion-medicamentos" class="flex-1 p-6 md:p-10 overflow-y-auto bg-gray-100 rounded-tl-3xl">
+        <h3 class="text-3xl font-bold mb-10 border-b-2 border-gray-300 pb-4">
+          Medicamentos de Hoy
+        </h3>
+
+
+        <div
+          class="rounded-2xl bg-blue-100 p-6 shadow-lg mb-8 hover:-translate-y-1 hover:shadow-2xl transition border border-gray-200">
+          <h4 class="text-2xl font-semibold text-blue-900 mb-3">
+            Crotolamo
+          </h4>
+          <p class="text-gray-700 mb-6">08:00 AM — 1 tableta</p>
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition">
+              Tomar
+            </button>
+            <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium transition">
+              Omitir
+            </button>
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-2 rounded-lg font-medium transition">
+              Posponer
+            </button>
+          </div>
+        </div>
+
+
+        <div
+          class="rounded-2xl bg-blue-100 p-6 shadow-lg mb-8 hover:-translate-y-1 hover:shadow-2xl transition border border-gray-200">
+          <h4 class="text-2xl font-semibold text-blue-900 mb-3">
+            Crotolamo
+          </h4>
+          <p class="text-gray-700 mb-6">08:00 AM — 1 tableta</p>
+          <div class="flex flex-wrap gap-4">
+            <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition">
+              Tomar
+            </button>
+            <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium transition">
+              Omitir
+            </button>
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-2 rounded-lg font-medium transition">
+              Posponer
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

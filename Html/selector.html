@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector de Usuario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0D2C7C] min-h-screen flex flex-col font-sans">
+
+    <header class="p-6">
+        <h1 class="text-center text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg">
+            Elige el tipo de usuario
+        </h1>
+    </header>
+
+    <section class="flex flex-col md:flex-row justify-center items-center gap-10 mt-12 px-6">
+
+        <div onclick="location.href='Ppaciente.html'"
+            class="cursor-pointer flex flex-col items-center justify-center w-64 h-64 bg-blue-600 rounded-2xl shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="/Assets/paciente.png" alt="Paciente" class="w-20 h-20 mb-4 filter invert">
+            <p class="text-xl font-semibold text-white">Paciente</p>
+        </div>
+
+        <div onclick="location.href='Pcuidador.html'"
+            class="cursor-pointer flex flex-col items-center justify-center w-64 h-64 bg-blue-400 rounded-2xl shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="/Assets/cuidador.png" alt="Cuidador" class="w-20 h-20 mb-4 filter invert">
+            <p class="text-xl font-semibold text-white">Cuidador</p>
+        </div>
+    </section>
+</body>
+
+</html>

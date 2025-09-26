@@ -1,61 +1,120 @@
-<!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Nombre de la página)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../CSS/pagina_estilo.css" />
+    <link rel="stylesheet" href="../JavaScript/demas_funciones.js" />
+    <link rel="stylesheet" href="../JavaScript/main.js" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>(Nombre de la página)</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../CSS/pagina_estilo.css">
-  <link rel="stylesheet" href="../JavaScript/demas_funciones.js">
-  <link rel="stylesheet" href="../JavaScript/main.js">
-</head>
+  <body class="h-screen flex flex-col font-sans text-gray-900 bg-blue-900">
+    <main class="flex flex-col h-full">
 
-<body class="h-screen flex flex-col bg-gray-100 font-[Montserrat] text-gray-800">
-
-  <main class="flex flex-col h-full">
-
-    <header
-      class="bg-gradient-to-br from-blue-900 to-blue-700 text-white px-8 py-4 flex justify-between items-center shadow-md">
-      <h2 class="text-lg font-semibold">Bienvenido, (nombre del usuario)</h2>
-      <div class="flex space-x-6 text-xl cursor-pointer">
-        <span class="hover:scale-110 transition"></span>
-        <span class="hover:scale-110 transition"></span>
-        <span class="hover:scale-110 transition"></span>
-      </div>
-    </header>
-
-    <div class="flex flex-1 h-full">
-
-      <aside class="w-56 bg-white p-6 border-r shadow-sm">
-        <ul class="space-y-2">
-          <li class="px-3 py-2 rounded-md text-blue-700 font-medium cursor-pointer hover:bg-gray-100">Pacientes</li>
-          <li class="px-3 py-2 rounded-md text-blue-700 font-medium cursor-pointer hover:bg-gray-100">Medicamentos</li>
-          <li class="px-3 py-2 rounded-md text-blue-700 font-medium cursor-pointer hover:bg-gray-100">Historial</li>
-          <li class="px-3 py-2 rounded-md text-blue-700 font-medium cursor-pointer hover:bg-gray-100">Reportes</li>
-        </ul>
-      </aside>
-
-      <section class="flex-1 p-8 overflow-y-auto">
-        <h3 class="text-xl font-semibold text-blue-900 mb-6">Medicamentos de Hoy</h3>
-
-        <div class="bg-white p-6 rounded-xl shadow-md mb-6 hover:-translate-y-1 transition">
-          <h4 class="text-lg font-semibold text-blue-700 mb-2">Crotolamo</h4>
-          <p class="text-sm text-gray-600 mb-4">08:00 AM - 1 tableta</p>
-          <div class="flex gap-3">
-            <button
-              class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md font-semibold text-sm transition">Tomar</button>
-            <button
-              class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-semibold text-sm transition">Omitir</button>
-            <button
-              class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-4 py-2 rounded-md font-semibold text-sm transition">Posponer</button>
-          </div>
+      <header class="text-white px-6 py-4 flex justify-between items-center shadow-md bg-blue-900 bg-opacity-90">
+        <div>
+          <h2 class="text-xl font-semibold bg-blue-900 bg-opacity-100 rounded-full px-4 py-1">
+            Bienvenido, (nombre de usuario)
+          </h2>
         </div>
+        <nav class="flex space-x-6 text-lg">
+          <span class="hover:scale-105 transition">Inicio</span>
+          <span class="hover:scale-105 transition">Perfil</span>
+          <span class="hover:scale-105 transition">Cerrar sesión</span>
+        </nav>
+      </header>
 
-      </section>
-    </div>
-  </main>
+      <div class="flex flex-1 overflow-hidden">
+        <aside class="w-60 p-4 shadow-sm bg-blue-900 bg-opacity-90 overflow-y-auto">
+          <ul class="space-y-3">
+            <li class="px-4 py-2 rounded-md text-white font-medium cursor-pointer hover:bg-gray-200 hover:text-gray-900 transition">
+              Pacientes
+            </li>
+            <li class="px-4 py-2 rounded-md text-white font-medium cursor-pointer hover:bg-gray-200 hover:text-gray-900 transition">
+              Medicamentos
+            </li>
+            <li class="px-4 py-2 rounded-md text-white font-medium cursor-pointer hover:bg-gray-200 hover:text-gray-900 transition">
+              Historial
+            </li>
+            <li class="px-4 py-2 rounded-md text-white font-medium cursor-pointer hover:bg-gray-200 hover:text-gray-900 transition">
+              Reportes
+            </li>
+          </ul>
+        </aside>
 
-</body>
+        <section
+          id="seccion-medicamentos"
+          class="flex-1 p-6 md:p-10 overflow-y-auto bg-gray-100 bg-opacity-90 m-4 rounded-3xl border-4 border-gray-800"
+        >
+          <h3 class="text-3xl font-bold mb-8 border-b pb-3">Medicamentos de Hoy</h3>
 
+          <div class="rounded-xl bg-blue-700 bg-opacity-30 p-6 shadow-md mb-8 hover:-translate-y-1 transition border-2 border-gray-200">
+            <h4 class="text-2xl font-semibold border-b pb-2 mb-4">Crotolamo</h4>
+            <p class="text-base mb-5">08:00 AM — 1 tableta</p>
+            <div class="flex flex-wrap gap-4">
+              <button class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md font-semibold text-base transition">
+                Tomar
+              </button>
+              <button class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-semibold text-base transition">
+                Omitir
+              </button>
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md font-semibold text-base transition">
+                Posponer
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-blue-700 bg-opacity-30 p-6 shadow-md mb-8 hover:-translate-y-1 transition border-2 border-gray-200">
+            <h4 class="text-2xl font-semibold border-b pb-2 mb-4">Crotolamo</h4>
+            <p class="text-base mb-5">08:00 AM — 1 tableta</p>
+            <div class="flex flex-wrap gap-4">
+              <button class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md font-semibold text-base transition">
+                Tomar
+              </button>
+              <button class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-semibold text-base transition">
+                Omitir
+              </button>
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md font-semibold text-base transition">
+                Posponer
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-blue-700 bg-opacity-30 p-6 shadow-md mb-8 hover:-translate-y-1 transition border-2 border-gray-200">
+            <h4 class="text-2xl font-semibold border-b pb-2 mb-4">Crotolamo</h4>
+            <p class="text-base mb-5">08:00 AM — 1 tableta</p>
+            <div class="flex flex-wrap gap-4">
+              <button class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md font-semibold text-base transition">
+                Tomar
+              </button>
+              <button class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-semibold text-base transition">
+                Omitir
+              </button>
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md font-semibold text-base transition">
+                Posponer
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-blue-700 bg-opacity-30 p-6 shadow-md mb-8 hover:-translate-y-1 transition border-2 border-gray-200">
+            <h4 class="text-2xl font-semibold border-b pb-2 mb-4">Crotolamo</h4>
+            <p class="text-base mb-5">08:00 AM — 1 tableta</p>
+            <div class="flex flex-wrap gap-4">
+              <button class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md font-semibold text-base transition">
+                Tomar
+              </button>
+              <button class="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-semibold text-base transition">
+                Omitir
+              </button>
+              <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-5 py-2 rounded-md font-semibold text-base transition">
+                Posponer
+              </button>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </main>
+  </body>
 </html>

@@ -5,7 +5,7 @@ function guardarConfiguracion() {
   localStorage.setItem("tamañoFuente", tamañoFuente);
   localStorage.setItem("modoContraste", modoContraste);
 
-  alert("Configuración guardada ✅");
+  alert("Configuración guardada ");
   location.reload()
 }
 
@@ -16,8 +16,8 @@ function aplicarConfiguracion() {
   if (tamañoFuente) {
     document.body.style.fontSize =
       tamañoFuente === "small" ? "14px" :
-      tamañoFuente === "medium" ? "18px" :
-      "22px";
+        tamañoFuente === "medium" ? "18px" :
+          "22px";
   }
 
   if (modoContraste) {

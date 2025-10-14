@@ -1,29 +1,41 @@
 function guardarConfiguracion() {
   const tamañoFuente = document.getElementById("tamañoFuente").value;
-  const modoContraste = document.getElementById("contraste").checked;
+  const formatoHora = document.querySelector('select[aria-label="Formato de hora"]')?.value;
 
   localStorage.setItem("tamañoFuente", tamañoFuente);
-  localStorage.setItem("modoContraste", modoContraste);
 
-  alert("Configuración guardada ");
-  location.reload()
+  if (formatoHora) {
+    localStorage.setItem("formatoHora", formatoHora);
+  }
+
+  location.reload();
 }
 
 function aplicarConfiguracion() {
   const tamañoFuente = localStorage.getItem("tamañoFuente");
-  const modoContraste = localStorage.getItem("modoContraste") === "true";
-
   if (tamañoFuente) {
-    document.body.style.fontSize =
-      tamañoFuente === "small" ? "14px" :
-        tamañoFuente === "medium" ? "18px" :
-          "22px";
-  }
-
-  if (modoContraste) {
-    document.body.classList.add("bg-black", "text-white");
-  } else {
-    document.body.classList.remove("bg-black", "text-white");
+    let fontSize;
+    switch (tamañoFuente) {
+      case "small": fontSize = "14px"; break;
+      case "medium": fontSize = "18px"; break;
+      case "large": fontSize = "22px"; break;
+      default: fontSize = "16px";
+    }
+    let styleTag = document.getElementById("fuente-personalizada");
+    if (!styleTag) {
+      styleTag = document.createElement("style");
+      styleTag.id = "fuente-personalizada";
+      document.head.appendChild(styleTag);
+    }
+    styleTag.innerHTML = `
+      body, body * { font-size: ${fontSize} !important; }
+      .text-3xl, .text-2xl, .text-xl, .text-lg, .text-base, .text-sm, .text-xs {
+        font-size: ${fontSize} !important;
+      }
+    `;
   }
 }
+
+window.onload = aplicarConfiguracion;
+
 window.onload = aplicarConfiguracion;

@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panel Cuidador</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../JavaScript/config.js"></script>
 </head>
 
 <body class="h-screen flex flex-col font-sans bg-[#0D2C7C] text-gray-900">
-  <script src="../JavaScript/config.js"></script>
   <main class="flex flex-col h-full">
 
     <header
@@ -51,22 +51,29 @@
 
       <aside class="w-64 p-6 bg-[#0D2C7C] bg-opacity-95 shadow-lg overflow-y-auto">
         <ul class="space-y-4">
-          <li
-            class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
-            Pacientes
-          </li>
-          <li
-            class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
-            Medicamentos
-          </li>
-          <li
-            class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
-            Historial
-          </li>
-          <li
-            class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
-            Reportes
-          </li>
+          <a href=".//pacientes.html"><li
+              class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
+              Pacientes
+            </li>
+          </a>
+          <a href="medicamentos.html">
+            <li
+              class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
+              Medicamentos
+            </li>
+          </a>
+          <a href="historial.html">
+            <li
+              class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
+             Historial
+            </li>
+          </a>
+          <a href="reportes.html">
+            <li
+              class="px-4 py-3 rounded-lg text-white font-medium cursor-pointer hover:bg-yellow-300 hover:text-gray-900 transition">
+              Reportes
+            </li>
+          </a>
         </ul>
       </aside>
 
